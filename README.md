@@ -8,19 +8,16 @@ PageSpeed results: 94 [Mobile], 90 [Desktop]
 - Added media="print" to print.css 
 - Moved analytics.js to the bottom of body
 - Removed Google Web Fonts script and replaced with javascript at the bottom of body
-- 
 - Minified HTML
 
 ##Changes made in pizza.html
 - Replaced pizza.png with an 8-bit transparent PNG
 
 ##Changes made to main.js
-- Added a new captureScroll function in order to capture the pixels scrolled. 
-- Used requestAnimationFrame in captureScroll() to sync animation
-- Changed style.left for style.transform for performance purposes
-- Updated window.addEventListener to call captureScroll() instead of updatePosition
+- Moved all DOM queries outside of loops
+- Moved calculations that can be run once outside of loops (vars - dx, newwidth, scroll etc.)
 
-###Recorded ~0.35ms average after changes made
+###Recorded ~0.45ms average after changes made
 
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
